@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prometheus-node-app
+  namespace: default  
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prometheus-node-app
+  template:
+    metadata:
+      labels:
+        app: prometheus-node-app
+    spec:
+      containers:
+        - name: prometheus-node-app
+          imagePullPolicy: IfNotPresent
+          image: maurice94/prometheus-node-app:latest   
+          ports:
+            - containerPort: 8080
+
