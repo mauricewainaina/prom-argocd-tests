@@ -1,1 +1,0 @@
-# prom-argocd-tests
