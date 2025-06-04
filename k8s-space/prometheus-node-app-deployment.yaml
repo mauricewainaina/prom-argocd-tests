@@ -4,7 +4,7 @@ metadata:
   name: prometheus-node-app
   namespace: argocd
 spec:
-  replicas: 2
+  replicas: 10
   selector:
     matchLabels:
       app: prometheus-node-app
